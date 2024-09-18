@@ -1,12 +1,12 @@
-
-import './App.css';
-
-function App() {
+import React from 'react';
+import Navbar from './Components/Navbar'; 
+import './App.css'
+function App () {
   return (
-    <div className="App">
-      zaib
+    <div>
+      <Navbar /> 
     </div>
   );
-}
+};
 
 export default App;
