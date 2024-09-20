@@ -1,5 +1,5 @@
 import React from "react";
-import sec1 from '../../Assests/sec1.png' 
+import {sec1} from '../../Assests/assests' 
 import { ArrowRightOutlined } from "@ant-design/icons";
 
 const Section1 = () => {

@@ -5,6 +5,7 @@ import img4 from './4.png';
 import img5 from  './img5.png';
 import img6 from   './img6.png';
 import img7 from     './img7.png';
+import sec1 from './sec1.png'
 
 
 
@@ -20,5 +21,6 @@ export {
     img6,
     img7,
     google,
-    ibm
+    ibm,
+    sec1
 };
