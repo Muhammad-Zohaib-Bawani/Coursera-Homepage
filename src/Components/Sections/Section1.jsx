@@ -1,5 +1,5 @@
 import React from "react";
-import sec1 from '../../assests/sec1.png' 
+import sec1 from '../../Assests/sec1.png' 
 import { ArrowRightOutlined } from "@ant-design/icons";
 
 const Section1 = () => {
@@ -173,7 +173,7 @@ const Section1 = () => {
             <div className="row rowlin">
               <img
                 src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/77hmeEJo3ZPlURCU02fD52/aa37b7f7b52285ba350acac62d8af5c1/illinois-3.png?auto=format%2Ccompress&amp;dpr=1&amp;h=32"
-                style={{ height: "30px" }}
+                style={{ height: "13px" }}
                 alt="University of Illinois at Urbana-Champaign"
               />
               <img

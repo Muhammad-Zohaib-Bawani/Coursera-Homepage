@@ -1,216 +1,79 @@
+
 import React from 'react';
-import { Anchor } from 'antd';
 import { ArrowRightOutlined } from "@ant-design/icons";
-import Card from '../Card.jsx'
-import Box from '@mui/joy/Box';
-import Tabs from '@mui/joy/Tabs';
-import TabList from '@mui/joy/TabList';
-import Tab from '@mui/joy/Tab';
-
-
-// const Section2 = () => (
-//   <>
-// <
-
-//   <div style={{ padding: '20px' }}>
-//       <Anchor
-//         direction="horizontal"
-//         style={{position:"relative"}}
-//         items={[
-//           {
-//             key: 'part-1',
-//             href: '',
-//             title: 'Project Manager',
-//           },
-//           {
-//             key: 'part-2',
-//             href: '',
-//             title: 'Data Analyst',
-//           },
-//           {
-//             key: 'part-3',
-//             href: '',
-//             title: 'Digital Marketer',
-//           },
-//           {
-//             key: 'part-3',
-//             href: '',
-//             title: '  IT Support Specialist',
-//           },
-//           {
-//             key: 'part-3',
-//             href: '',
-//             title: 'Bookkeeper',
-//           },
-//           {
-//             key: 'part-3',
-//             href: '',
-//             title: 'Cybersecurity',
-//           },
-//           {
-//             key: 'part-3',
-//             href: '',
-//             title: 'Front-End Developer',
-//           },
-//           {
-//             key: 'part-3',
-//             href: '',
-//             title: 'UX Designer',
-//           },
-//         ]}
-//       />
-//     </div>
-// </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-  
-//   </>
-// );
-
-// export default Section2;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import Carousel from '../carousel.jsx';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import Tabs from '@mui/material/Tabs';
 
 export default function Section2() {
-  const [index, setIndex] = React.useState(0);
+  const [value, setValue] = React.useState('0'); // Start with the first tab
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const jobs = [
+    "Project Manager",
+    "Data Analyst",
+    "Digital Marketer",
+    "IT Support Specialist",
+    "Bookkeeper",
+    "Cybersecurity",
+    "Front-End Developer",
+    "UX Designer"
+  ];
+
   return (
-
-    <>
     <div className="container pt-5">
-  <h2 style={{display:"inline"}} className='mb-3'>
- Launch a new career in as little as 6 months
-  </h2>
-   <a href="" className='mx-4' style={{color:"#0f1114"}}>   View all roles   <ArrowRightOutlined style={{height:"15px"}}/>
-  </a>
- 
-    
-  <Box sx={{ display: 'flex', gap: 2, flexDirection: 'column' }} className="mt-4">
+      <h2 style={{ display: "inline" }} className='mb-3'>
+        Launch a new career in as little as 6 months
+      </h2>
+      <a href="" className='mx-4' style={{ color: "#0f1114" }}>
+        View all roles <ArrowRightOutlined style={{ height: "15px" }} />
+      </a>
+
+      <Box sx={{ width: '100%', typography: 'body1' }}   >
+        <TabContext value={value} >
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className="tabs">
+            <TabList onChange={handleChange} aria-label="job tabs">
+              {jobs.map((job, idx) => (
+                <Tab key={idx} label={job} value={String(idx)} className='tab_list' />
+              ))}
+            </TabList>
+          </Box>
+          <Carousel jobName={jobs[Number(value)]}  />
+        </TabContext>
+      </Box>
+
+
+
+
+
+    <Box sx={{ maxWidth: { xs: 320, sm: 440 }, bgcolor: 'background.paper' }} className="tabs-small mt-3">
       <Tabs
-        aria-label="Plain tabs"
-        value={index}
-        onChange={(event, value) => setIndex(value)}
+        value={value}
+        onChange={handleChange}
+        variant="scrollable"
+        scrollButtons="auto"
+        aria-label="scrollable auto tabs example"
       >
-        <TabList variant="plain">
-          <Tab variant={index === 0 ? 'outlined' : 'plain'}>Project Manager</Tab>
-          <Tab variant={index === 1 ? 'outlined' : 'plain'}>Data Analyst</Tab>
-          <Tab variant={index === 2 ? 'outlined' : 'plain'}>Digital Marketer</Tab>
-          <Tab variant={index === 3? 'outlined' : 'plain'}>IT Support Specialist</Tab>
-          <Tab variant={index === 4 ? 'outlined' : 'plain'}>Bookkeeper</Tab>
-          <Tab variant={index === 5? 'outlined' : 'plain'}>Cybersecurity</Tab>
-          <Tab variant={index === 6 ? 'outlined' : 'plain'}>Front-End Developer</Tab>
-          <Tab variant={index === 7 ? 'outlined' : 'plain'}>UX Designer</Tab>
-        </TabList>
+       {jobs.map((job, idx) => (
+                <Tab key={idx} label={job} value={String(idx)} className='tab_list' />
+              ))}
       </Tabs>
-
-      <Tabs
-    
-        value={index}
-        onChange={(event, value) => setIndex(value)}
-      >
-        <TabList variant="outlined" disableUnderline>
-          <Tab
-            variant={index === 0 ? 'soft' : 'plain'}
-            color={index === 0 ? 'success' : 'neutral'}
-          >
-            First tab
-          </Tab>
-          <Tab
-            variant={index === 1 ? 'soft' : 'plain'}
-            color={index === 1 ? 'warning' : 'neutral'}
-          >
-            Second tab
-          </Tab>
-          <Tab
-            variant={index === 2 ? 'soft' : 'plain'}
-            color={index === 2 ? 'danger' : 'neutral'}
-          >
-            Third tab
-          </Tab>
-        </TabList>
-      </Tabs>
-
-      <Tabs
-        aria-label="Soft tabs"
-        value={index}
-        onChange={(event, value) => setIndex(value)}
-      >
-        <TabList variant="soft">
-          <Tab
-            variant={index === 0 ? 'solid' : 'plain'}
-            color={index === 0 ? 'primary' : 'neutral'}
-          >
-            First tab
-          </Tab>
-          <Tab
-            variant={index === 1 ? 'solid' : 'plain'}
-            color={index === 1 ? 'primary' : 'neutral'}
-          >
-            Second tab
-          </Tab>
-          <Tab
-            variant={index === 2 ? 'solid' : 'plain'}
-            color={index === 2 ? 'primary' : 'neutral'}
-          >
-            Third tab
-          </Tab>
-        </TabList>
-      </Tabs>
-
-
-
-
-
-
-
-
-
-      <Card />
-
-
-
     </Box>
+
+
+
     </div>
-    </>
-   
   );
 }
+
+
+
+
+
+

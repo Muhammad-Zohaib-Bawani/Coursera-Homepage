@@ -32,13 +32,11 @@
   border-bottom: 6px #fff solid;
   padding-bottom: 6px;
 }
-
 .input-group {
   width: 10% !important;
 }
 .anticon-search {
   background: #0056d2;
-
   width: 30px;
   height: 30px;
   color: #fff;
@@ -68,16 +66,10 @@
   color: #000;
 }
 @media (max-width: 991px) {
-  .main-nav {
-    display: none;
+  .sec1-small,
+  .sec-nav , .recommendations ,   .tabs-small {
+    display: flex !important;
   }
-  .sec-nav {
-    display: flex;
-  }
-  .top-bar {
-    display: none;
-  }
-
   .navbar-toggler {
     border: none;
     color: #000;
@@ -86,19 +78,28 @@
     border: none;
     box-shadow: none;
   }
-  .sec1 {
-    display: none;
-  }
-  .sec1-small {
-    display: flex !important;
-  }
-  .img-box {
-    display: none !important;
-  }
   .img-box-small {
     display: flex !important;
     flex-wrap: wrap;
     align-items: center;
+  }
+  .card-cards,
+  .tabs,
+  .img-box,
+  .sec1,
+  .top-bar,
+  .main-nav {
+    display: none !important;
+  }
+  .main-card{
+    padding: 20px 10px !important;
+  }
+  .sm-heading{
+    border-top: 1px solid #e6eaed;
+    padding-top: 15px;
+  }
+  .cardComponent{
+    padding: 10px !important;
   }
 }
 @media (min-width: 1200px) {
@@ -138,40 +139,75 @@
   display: none;
 }
 
-.rowlin img{
+.rowlin img {
   width: 80px;
   margin: 5px;
- 
 }
 
 .css-1xho1ph-JoyTab-root.Mui-selected {
   background-color: #fff !important;
   border: none !important;
 }
-.css-1xho1ph-JoyTab-root.Mui-selected:hover{
+.css-1xho1ph-JoyTab-root.Mui-selected:hover {
   border-bottom: 2px solid #0056d2 !important;
-} 
-
+}
 
 .input-div {
   padding: 8px 8px;
   border-radius: 4px;
   font-weight: 600;
-  background: #F1F2F3;
+  background: #f1f2f3;
 }
-.input-div2{
+.input-div2 {
   background-color: #341285;
-        padding: 6px 8px;
-        border-radius: 4px;
-        width: 70%;
-        color: #fff;
-        font-size: 16px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  width: 70%;
+  color: #fff;
+  font-size: 16px;
 }
 
-.box3{
-  border-top: 1px solid #F1F2F3;
-    margin-top: 25px;
-    margin-right: 55px;
-    padding-top: 20px;
-    font-size: 14px;
+.box3 {
+  border-top: 1px solid #f1f2f3;
+  margin-top: 25px;
+  margin-right: 55px;
+  padding-top: 20px;
+  font-size: 14px;
+}
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: none !important;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Slight uplift on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+.tab_list {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 14px !important;
+  padding: 0px 10px !important;
+}
+.tabs-small , .recommendations {
+  display: none;
+}
+.main-card{
+  padding: 48px 70px;
+}
+.custom-card-img{
+  height: 50px;
+  width: 70px;
+  margin-right: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.cardComponent{
+  padding: 32px;
+}
+.sec4 {
+  background-image: url('https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/506bf6d50f5f97ab96bc75c41dfae8d8.png?auto=format%2Ccompress&dpr=1&w=800'); 
+  background-size: cover; 
+  background-position: center; 
+
 }

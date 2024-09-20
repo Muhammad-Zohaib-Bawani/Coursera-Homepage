@@ -315,7 +315,7 @@ const Navbar = () => {
                     paddingLeft: "40px",
                     height: "44px",
                     marginTop: "10px",
-                    width: "100%", // Ensures the input takes up full width
+                    width: "100%",
                   }}
                   className="navbarInput"
                 />
