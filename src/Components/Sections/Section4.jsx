@@ -1,5 +1,5 @@
 import React from "react";
-import {img1, img5,img6,img7, ibm, google } from "../../Assests/assests";
+import { img5,img6,img7, google } from "../../Assests/assests";
 import Card from "./card";
 import {
     SafetyCertificateTwoTone,

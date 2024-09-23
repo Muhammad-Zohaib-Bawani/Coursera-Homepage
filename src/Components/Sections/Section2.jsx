@@ -9,7 +9,7 @@ import TabList from '@mui/lab/TabList';
 import Tabs from '@mui/material/Tabs';
 
 export default function Section2() {
-  const [value, setValue] = React.useState('0'); // Start with the first tab
+  const [value, setValue] = React.useState('0'); 
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
