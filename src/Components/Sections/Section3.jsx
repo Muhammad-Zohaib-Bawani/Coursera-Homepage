@@ -1,5 +1,5 @@
 import React from "react";
-import { img1, img2, img3, img4, ibm, google } from "../../Assests/assests";
+import { img1, img2, img3, img4, ibm, google } from "../../assests/assests";
 import {
   SafetyCertificateTwoTone,
   ArrowRightOutlined,

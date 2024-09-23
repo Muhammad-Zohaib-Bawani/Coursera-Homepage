@@ -1,5 +1,5 @@
 import React from "react";
-import {sec1} from '../../Assests/assests' 
+import {sec1} from '../../assests/assests' 
 import { ArrowRightOutlined } from "@ant-design/icons";
 
 const Section1 = () => {
